@@ -28,7 +28,7 @@ fly -t ci unpause-pipeline -p demo
 
 ![build-concourse-example](build-concourse-example.png)
 
-The very first build it will download the necessary docker images to build the Spring Boot project.
+During the very first build it will download the necessary docker images to build the Spring Boot project.
 
 ![pulling-java-docker-iamge](pulling-java-docker-image.png)
 
@@ -61,7 +61,7 @@ The next time the build is much faster
 
 ![with-maven-cache](with-maven-cache.png) 
 
-Remove pipelines
+Remove pipelines:
 ```bash
 fly -t ci destroy-pipeline -p demo
 ```
