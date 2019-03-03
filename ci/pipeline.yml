@@ -1,0 +1,16 @@
+resources:
+
+- name: source-code
+  type: git
+  source:
+    uri: https://github.com/altfatterz/concourse-example.git
+    branch: master
+
+jobs:
+
+- name: build-concourse-example
+  plan:
+  - get: source-code
+    trigger: true
+  - task: build
+    file: source-code/ci/tasks/build.yml
